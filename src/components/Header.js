@@ -14,7 +14,7 @@ function Header() {
             </h2>
           </li>
           <li>
-            <NavLink to="/books">
+            <NavLink to="/">
               Books
             </NavLink>
           </li>
