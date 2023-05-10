@@ -19,8 +19,8 @@ export const addAsyncBook = createAsyncThunk('books/addAsyncBook', async (book) 
   return response.data;
 });
 
-export const removeAsyncBook = createAsyncThunk('books/removeAsyncBook', async (itemId) => {
-  const response = await axios.delete(`${BASE_URL}/${itemId}`);
+export const removeAsyncBook = createAsyncThunk('books/removeAsyncBook', async (id) => {
+  const response = await axios.delete(`${BASE_URL}/${id}`);
   return response.data;
 });
 
@@ -29,7 +29,7 @@ const newBooks = (load) => {
   const array = [];
   keys.forEach((key) => {
     array.push({
-      itemId: key,
+      item_id: key,
       ...load[key][0],
     });
   });
@@ -44,7 +44,7 @@ const booksSlice = createSlice({
       state.books.push(action.payload);
     },
     removeBook: (state, action) => {
-      state.books = state.books.filter((book) => book.itemId !== action.payload);
+      state.books = state.books.filter((book) => book.item_id !== action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -71,7 +71,7 @@ const booksSlice = createSlice({
         state.error = action.error.message;
       })
       .addCase(removeAsyncBook.fulfilled, (state, action) => {
-        const filteredBooks = state.books.filter((book) => book.itemId !== action.payload);
+        const filteredBooks = state.books.filter((book) => book.item_id !== action.payload);
         return { ...state, books: filteredBooks, load: true };
       });
   },
