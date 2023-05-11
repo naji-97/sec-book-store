@@ -1,38 +1,89 @@
-/* stylelint-disable-next-line block-opening-brace-space-before */
-nav{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap');
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   background-color: #f1f1f1;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.panel-bg {
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: var(--white-two);
 }
 
-.links ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.user {
+  width: 2.813rem;
+  height: 2.813rem;
+
+  /* margin: 0 0 0 41.5rem; */
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
 }
 
-.links ul li {
-  margin: 0 10px;
+.user i {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: #0290ff;
 }
 
-a.logo {
-  width: 15rem;
+.logo {
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.875rem;
-  font-weight: bold;
+  font-weight: 800;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #0290ff;
+  color: var(--azure);
+}
+
+.logo a {
+  color: var(--azure);
+}
+
+.links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.books {
+  margin: 0 20px 0;
+  height: 1rem;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  font-family: 'Montserrat', sans-serif;
+  color: #12121212;
+}
+
+.links a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: var(--black-two);
+  font-weight: 600;
+}
+
+.categories {
+  margin: 0 0 0 20px;
+  height: 1rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
 }

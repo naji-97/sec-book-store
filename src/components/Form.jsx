@@ -16,7 +16,7 @@ function Form() {
       title,
       author,
       item_id: uuidv4(),
-      category: 'Mystery',
+      category: 'web development',
     };
 
     if (title !== '' && author !== '') {
@@ -29,28 +29,32 @@ function Form() {
   }
 
   return (
-    <>
-      <h2>Add  New Book</h2>
-      <form onSubmit={handleSubmit}>
+    <form action="" className="" method="" onSubmit={handleSubmit}>
+      <p className="form-title">Add New Book</p>
+      <div className="input-group">
         <input
+          style={{ color: 'black' }}
           type="text"
-          name="title"
+          placeholder="Book title"
           value={title}
+          id="text"
+          name="text"
           onChange={(e) => setTitle(e.target.value)}
-          id="title"
-          placeholder="Book Title"
+          className="title-input"
         />
         <input
+          style={{ color: 'black' }}
           type="text"
-          name="author"
+          placeholder=" Author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
           id="author"
-          placeholder="Book Author"
+          name="author"
+          className="author"
         />
-        <Button className="add-book" type="submit" value="Submit" />
-      </form>
-    </>
+        <Button type="submit" className="add-btn" value="Add book" />
+      </div>
+    </form>
   );
 }
 
