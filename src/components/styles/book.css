@@ -144,6 +144,18 @@
   background-color: var(--azure);
 }
 
+.line-2 {
+  width: 0.125rem;
+  height: 4.375rem;
+  border: solid 1px #e8e8e8;
+}
+
+.line-3 {
+  width: 0.125rem;
+  height: 1.5rem;
+  border: solid 1px #e8e8e8;
+}
+
 .progress-chapter {
   margin-top: -50px;
 }

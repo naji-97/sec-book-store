@@ -24,9 +24,9 @@ function Book({
       <div className="flex-spac-btwn">
         <div className="buttons-contanier flex">
           <Button className="comments-btn" value="Comment" type="button" />
-          <hr />
+          <hr className="line-3" />
           <Button className="remove-btn" type="button" onClick={handelRemoveBook} value="Remove" />
-          <hr />
+          <hr className="line-3" />
           <Button className="edit-btn" value="Edit" type="button" />
         </div>
         <div className="progress-chapter  flex-spac-btwn">
@@ -38,7 +38,7 @@ function Book({
             </div>
           </div>
 
-          <hr />
+          <hr className="line-2" />
           <div className="book-chap">
             <p className="chap-now current-chapter">Current Chapter</p>
             <p className="current-lesson">Chapter 20</p>
