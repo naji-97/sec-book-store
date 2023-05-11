@@ -30,6 +30,7 @@ function Form() {
 
   return (
     <form action="" className="" method="" onSubmit={handleSubmit}>
+      <div className="line" />
       <p className="form-title">Add New Book</p>
       <div className="input-group">
         <input
